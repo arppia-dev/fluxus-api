@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: fluxus-db-user
+      POSTGRES_PASSWORD: fluxus-db-password
+      POSTGRES_DB: fluxus-db
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: alexis.sniffer@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: fluxus
